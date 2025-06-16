@@ -1,3 +1,3 @@
 # Url-Blocker-Extension
 This is a chrome extension used to block and un-block url's based on toggle switch enable.
-Guys currently i am updating some UI within the extension so soon i'll update the repository with code stay tuned!
+Guys, to using this extension enable developer mode within your extensions and choose the following folder. After this, pack the selected folder to use the extension.
