@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "SafeShield",
+  "version": "1.1",
+  "description": "Block malicious and user-specified websites with real-time threat detection and statistics.",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "storage",
+    "notifications",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://openphish.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["blocked.html", "blocked.js", "chart.min.js", "blocked-video.mp4", "blocked-image.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "128": "icon.png"
+  }
+}
